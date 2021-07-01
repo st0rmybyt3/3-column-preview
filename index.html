@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap" rel="stylesheet">  
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      font-size: 15px;
+      /* font-family: sans-serif; */
+    }
+    .attribution { font-size: 11px; text-align: center; padding-top: 10px; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .container {
+      display: grid;
+      justify-content: center;
+      /* transform: translateX(34%); */
+      /* align-items: center; */
+      margin-top: 50px;
+      border-radius: 6px;
+      height: 450px;
+      /* width: 800px; */
+      grid-template-columns: repeat(3, 300px);
+    }
+    .cars {
+      padding: 20px 50px;
+    }
+    .cars:first-child {
+      border-radius: 6px 0 0 6px;
+    }
+    .cars:last-child {
+      border-radius: 0 6px 6px 0;
+    }
+    .cars p,
+    a { 
+      color: hsla(0, 0%, 100%, 0.75);
+      font-family: 'Lexend Deca';
+    }
+    .cars h1 { 
+      color: hsl(0, 0%, 95%);
+      font-family: 'Big Shoulders Display', cursive;
+      line-height: 1.5;
+     }
+    .cars img { padding-top: 25px; }
+    .sedans {
+      background: hsl(31, 77%, 52%);
+    }
+    .suvs {
+      background: hsl(184, 100%, 22%);
+    }
+    .luxury {
+      background: hsl(179, 100%, 13%);
+    }
+    .btn {
+      background: hsl(0, 0%, 95%);
+      display: inline-block;
+      text-decoration: none;
+      padding: 15px 40px;
+      /* transform: translateY(80px); */
+      margin-top: 80px;
+      border-radius: 25px;
+    }
+    .btn-sedans {
+      color: hsl(31, 77%, 52%);
+    }
+    .btn-suvs {
+      color: hsl(184, 100%, 22%)
+    }
+    .btn-luxury {
+      color: hsl(179, 100%, 13%)
+    }
+
+    @media screen and (max-width: 375px) {
+      .container {
+        display: grid;
+        height: 800px;
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 1fr);
+        align-items: center;
+        margin: 10px 20px
+      }
+      .cars {
+        padding: 20px 40px;
+      }
+      .cars:first-child {
+      border-radius: 6px 6px 0 0;
+      }
+      .cars:last-child {
+        border-radius: 0 0 6px 6px;
+      }
+      .btn {
+        margin: 20px 0;
+      }
+      .attribution { display: none; }
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="sedans cars">
+      <img src="./images/icon-sedans.svg" alt="">
+      <h1>Sedans</h1>
+      <p>
+        Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+        or on your next road trip.
+      </p>
+      <a href="#" class="btn btn-sedans">Learn More</a>
+    </div>
+    <div class="suvs cars">
+      <img src="./images/icon-suvs.svg" alt="">
+      <h1>SUVs</h1>
+      <p>
+        Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+        and off-road adventures.
+      </p>
+      <a href="#" class="btn btn-suvs">Learn More</a>
+    </div>
+    <div class="luxury cars">
+      <img src="./images/icon-luxury.svg" alt="">
+      <h1>Luxury</h1>
+      <p>
+        Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+        rental and arrive in style.
+      </p>
+      <a href="#" class="btn btn-luxury">Learn More</a>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">st0rmybyt3</a>.
+  </div>
+</body>
+</html>
